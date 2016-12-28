@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.mrrobot97.netspeed.MainActivity">
+
+
+    <Button
+        android:id="@+id/bt_show"
+        android:text="打开悬浮窗"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_close"
+        android:text="关闭悬浮窗"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bt_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/bt_close"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_1"
+            android:text="显示上下行"
+            android:onClick="onRadioButtonClick"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio_2"
+            android:text="显示上行"
+            android:onClick="onRadioButtonClick"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio_3"
+            android:text="显示下行"
+            android:onClick="onRadioButtonClick"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_exit"
+        android:text="退出"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+</RelativeLayout>
