@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +23,6 @@
 
         <service android:name=".SpeedCalculationService">
         </service>
-
-        <service android:name=".FakeService"/>
 
         <receiver android:name="me.mrrobot97.netspeed.MyBroadcastReceiver">
             <intent-filter>

@@ -13,7 +13,7 @@ import android.util.Log;
 public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("yjw","receiver receive boot boradcast");
+        Log.d("yjw","receiver receive boot broadcast");
         boolean isShown= (boolean) SharedPreferencesUtils.getFromSpfs(context,MainActivity.IS_SHOWN,false);
         if(isShown){
             context.startService(new Intent(context,SpeedCalculationService.class));

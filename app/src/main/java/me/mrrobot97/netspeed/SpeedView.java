@@ -27,6 +27,7 @@ public class SpeedView extends FrameLayout {
     private void init() {
         statusBarHeight=WindowUtil.statusBarHeight;
         windowManager= (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+        //a view inflate itself, that's funny
         inflate(mContext,R.layout.speed_layout,this);
         downText= (TextView) findViewById(R.id.speed_down);
         upText= (TextView) findViewById(R.id.speed_up);

@@ -2,15 +2,14 @@ package me.mrrobot97.netspeed;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
-import android.icu.text.NumberFormat;
 import android.net.TrafficStats;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.RequiresApi;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
+
+import java.text.NumberFormat;
 
 /**
  * Created by mrrobot on 16/12/28.
@@ -35,7 +34,6 @@ public class WindowUtil {
     private long preRxBytes,preSeBytes;
     private long rxBytes,seBytes;
     private Handler handler=new Handler(){
-        @RequiresApi(api = Build.VERSION_CODES.N)
         @Override
         public void dispatchMessage(Message msg) {
             super.dispatchMessage(msg);
@@ -58,7 +56,6 @@ public class WindowUtil {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     private void calculateNetSpeed() {
         rxBytes=TrafficStats.getTotalRxBytes();
         seBytes=TrafficStats.getTotalTxBytes()-rxBytes;
@@ -70,8 +67,7 @@ public class WindowUtil {
         String upSpeed=null;
         String downSpeed=null;
 
-
-        NumberFormat df=NumberFormat.getNumberInstance();
+        NumberFormat df= java.text.NumberFormat.getNumberInstance();
         df.setMaximumFractionDigits(2);
 
         if(downloadSpeed>1024*1024){
@@ -79,7 +75,7 @@ public class WindowUtil {
             downSpeed=df.format(downloadSpeed)+"MB/s";
         }else if(downloadSpeed>1024){
             downloadSpeed/=(1024);
-            downSpeed=df.format(downloadSpeed)+"kB/s";
+            downSpeed=df.format(downloadSpeed)+"B/s";
         }else{
             downSpeed=df.format(downloadSpeed)+"B/s";
         }
@@ -110,6 +106,8 @@ public class WindowUtil {
         params.gravity= Gravity.LEFT|Gravity.TOP;
         params.format= PixelFormat.RGBA_8888;
         params.flags=WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE| WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL;
+                //设置悬浮窗可以拖拽至状态栏的位置
+//        | WindowManager.LayoutParams.FLAG_FULLSCREEN| WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
 
     }
 

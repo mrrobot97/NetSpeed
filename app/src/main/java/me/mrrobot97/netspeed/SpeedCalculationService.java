@@ -17,7 +17,6 @@ import static me.mrrobot97.netspeed.MainActivity.INIT_Y;
 public class SpeedCalculationService extends Service {
     private WindowUtil windowUtil;
     private boolean changed=false;
-    private final int FOREGROUND_ID=1997;
 
     @Override
     public void onCreate() {
@@ -25,14 +24,6 @@ public class SpeedCalculationService extends Service {
         WindowUtil.initX= (int) SharedPreferencesUtils.getFromSpfs(this,INIT_X,0);
         WindowUtil.initY= (int) SharedPreferencesUtils.getFromSpfs(this,INIT_Y,0);
         windowUtil=new WindowUtil(this);
-//        Intent intent=new Intent(this,MainActivity.class);
-//        PendingIntent pi=PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-//        Notification.Builder builder=new Notification.Builder(this);
-//        Notification notification=builder.setContentIntent(pi).build();
-//        startForeground(FOREGROUND_ID,notification);
-//        FakeService fakeService=new FakeService();
-//        fakeService.startForeground(FOREGROUND_ID,notification);
-//        fakeService.stopSelf();
     }
 
     @Override
