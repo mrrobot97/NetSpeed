@@ -28,7 +28,7 @@ public class WindowUtil {
         return isShowing;
     }
 
-    private boolean isShowing=false;
+    public static boolean isShowing=false;
 
     public static final int INTERVAL=2000;
     private long preRxBytes,preSeBytes;

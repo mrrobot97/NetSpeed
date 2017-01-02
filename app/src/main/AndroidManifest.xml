@@ -21,6 +21,15 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".MyTileService"
+            android:icon="@mipmap/ic_launcher"
+            android:label="NetSpeed"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <service android:name=".SpeedCalculationService">
         </service>
 
