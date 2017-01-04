@@ -1,6 +1,6 @@
 这次带来的是一个悬浮窗网速显示计，先看下效果：
 
-![demo](http://ockr1qfi1.bkt.clouddn.com/netspeed.gif)
+![demo](http://ockr1qfi1.bkt.clouddn.com/demo2.gif)
 
 这里主要是在桌面上显示一个悬浮窗，利用了WindowManager以及Service,接下来看看如何实现这样一个效果：
 首先APP必须获得在桌面上显示悬浮窗的机会，很多第三方ROM都限制了这一权限，我们首先就是要申请改权限，代码如下：
