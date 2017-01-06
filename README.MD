@@ -226,7 +226,7 @@ public class WindowUtil {
             downSpeed=df.format(downloadSpeed)+"MB/s";
         }else if(downloadSpeed>1024){
             downloadSpeed/=(1024);
-            downSpeed=df.format(downloadSpeed)+"B/s";
+            downSpeed=df.format(downloadSpeed)+"KB/s";
         }else{
             downSpeed=df.format(downloadSpeed)+"B/s";
         }

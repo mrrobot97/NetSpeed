@@ -75,7 +75,7 @@ public class WindowUtil {
             downSpeed=df.format(downloadSpeed)+"MB/s";
         }else if(downloadSpeed>1024){
             downloadSpeed/=(1024);
-            downSpeed=df.format(downloadSpeed)+"B/s";
+            downSpeed=df.format(downloadSpeed)+"KB/s";
         }else{
             downSpeed=df.format(downloadSpeed)+"B/s";
         }
@@ -85,7 +85,7 @@ public class WindowUtil {
             upSpeed=df.format(uploadSpeed)+"MB/s";
         }else if(uploadSpeed>1024){
             uploadSpeed/=(1024);
-            upSpeed=df.format(uploadSpeed)+"kB/s";
+            upSpeed=df.format(uploadSpeed)+"KB/s";
         }else{
             upSpeed=df.format(uploadSpeed)+"B/s";
         }
