@@ -1,12 +1,4 @@
----
-layout: post
-author: mrrobot97
-tags: Android 悬浮窗
-title: 制作一个网速显示悬浮窗
----
->2016转眼就要过去了，刚刚参加完学院举办的元旦晚会，看了看系里的大牛的各种事迹，内心感慨万分。回来继续安心做我的小码农，顺便更一下将近一个月没有更新的博客。
-
-这次带来的是一个悬浮窗网速显示计，先看下效果：
+先看下效果：
 
 ![demo](https://blog-1256554550.cos.ap-beijing.myqcloud.com/demo2.gif)
 
